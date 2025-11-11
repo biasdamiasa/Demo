@@ -1,23 +1,17 @@
 using UnityEngine;
 
-public class Contoh : MonoBehaviour
+public class ContohLoop : MonoBehaviour
 {
-    // Vector2 position1 = new Vector2(5, 1);
-
-
+    int nyawa = 10;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-
-    int angka = 4, result = 1;
-    
     void Start()
     {
-        while (angka >= 1)
+        while (nyawa > 0)
         {
-            result *= angka;
-            angka--;
+            nyawa--;
+            Debug.Log("Sisa nyawa: " + nyawa);
         }
-
-        Debug.Log(result);
+        Debug.Log("Game Over");
     }
 
     // Update is called once per frame
