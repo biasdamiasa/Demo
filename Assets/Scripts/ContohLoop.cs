@@ -2,16 +2,14 @@ using UnityEngine;
 
 public class ContohLoop : MonoBehaviour
 {
-    int nyawa = 10;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        while (nyawa > 0)
+        for(int i = 0; i < 3; i++)
         {
-            nyawa--;
-            Debug.Log("Sisa nyawa: " + nyawa);
+            Debug.Log("Pengulangan ke-" + i);
         }
-        Debug.Log("Game Over");
     }
 
     // Update is called once per frame
