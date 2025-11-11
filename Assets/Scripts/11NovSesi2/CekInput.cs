@@ -54,7 +54,13 @@ public class CekInput : MonoBehaviour
         {
             SpriteRenderer _localSpriteRenderer = _kotakBerwarna.GetComponent<SpriteRenderer>();
 
-            _localSpriteRenderer.color = Color.black;            
+            //Kalau mau pakai hex code
+            // Color warna;
+            // ColorUtility.TryParseHtmlString("#9641e0", out warna);
+
+            Color warnaAcak = new Color(Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f));
+
+            _localSpriteRenderer.color = warnaAcak;            
         }
     }
 }
