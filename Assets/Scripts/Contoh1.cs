@@ -3,14 +3,23 @@ using UnityEngine;
 public class Contoh1 : MonoBehaviour
 {
     [SerializeField]
-    string[] Nama = new string[3];
+    Player[] ArrayPlayer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Debug.Log(Nama[0]);
-        Debug.Log(Nama[1]);
-        Debug.Log(Nama[2]);
-
+        for (int i = 0; i < ArrayPlayer.Length; i++)
+        {
+            Debug.Log(ArrayPlayer[i].Name);
+            Debug.Log(ArrayPlayer[i].Level);
+            Debug.Log(ArrayPlayer[i].Health);
+        }
+        
+        foreach (Player player in ArrayPlayer)
+        {
+            Debug.Log(player.Name);
+            Debug.Log(player.Level);
+            Debug.Log(player.Health);
+        }
     }
 
     // Update is called once per frame
