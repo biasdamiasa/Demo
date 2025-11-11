@@ -6,28 +6,25 @@ public class Contoh : MonoBehaviour
     
     void Start()
     {
-        Player player = new Player();
+        Car car1 = new Car("Avanza", "Black");
+        Car car2 = new Car("Sigra", "Orange");
 
-        Player player2 = new Player();
+        Debug.Log("Car 1");
+        Debug.Log("Merk: " + car1.merk);
+        Debug.Log("Warna: " + car1.warna);
+        Debug.Log("Kecepatan: " + car1.speed);
+        car1.start();
+        car1.accelerate(40);
+        car1.brake();
 
-        player.Name = "Bias";
-        player.Level = 5;
-        player.Health = 80;
+        Debug.Log("Car 2");
+        Debug.Log("Merk: " + car2.merk);
+        Debug.Log("Warna: " + car2.warna);
+        Debug.Log("Kecepatan: " + car2.speed);
+        car2.start();
+        car2.accelerate(30);
+        car2.brake();
 
-        player.Name = "Damiasa";
-        player.Level = 4;
-        player.Health = 70;
-
-
-        Debug.Log("Player 1");
-        Debug.Log("Name: " + player.Name);    
-        Debug.Log("Level: " + player.Level);
-        Debug.Log("Health: " + player.Health);  
-          
-        Debug.Log("Player 2");
-        Debug.Log("Name: " + player2.Name);    
-        Debug.Log("Level: " + player2.Level);    
-        Debug.Log("Health: " + player2.Health);    
     }
 
     
