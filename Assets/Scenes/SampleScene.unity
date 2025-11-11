@@ -179,7 +179,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: -3080574147206746281, guid: 63313dc694d18fd499586ebd059bcf4d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -200,7 +200,7 @@ Transform:
   m_GameObject: {fileID: 123460980}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 4.24, y: 0.87, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -267,7 +267,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.9245283, g: 0.7955866, b: 0.17153193, a: 1}
   m_FlipX: 0
@@ -303,9 +303,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 259688234}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed813e55bd4678f45927783190a578fb, type: 3}
+  m_Script: {fileID: 11500000, guid: 7d72ae5a00c6d2145add7abccbb3061b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ListPlayer:
+  - Name: Bias
+    Level: 3
+    Health: 100
+  - Name: Damiasa
+    Level: 10
+    Health: 200
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
