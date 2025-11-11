@@ -5,6 +5,7 @@ public class CekInput : MonoBehaviour
     public GameObject _munculHilang;
     public GameObject _untukSpawn;
     public GameObject _targetDestroy;
+    public GameObject _kotakBerwarna;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -40,13 +41,20 @@ public class CekInput : MonoBehaviour
             Instantiate(_untukSpawn, new Vector3(Random.Range(-5, 5), Random.Range(-5, 5), 0), Quaternion.Euler(0, 0, Random.Range(0,360)));
 
         }
-        
-        if(Input.GetKeyDown(KeyCode.M))
+
+        if (Input.GetKeyDown(KeyCode.M))
         {
             GameObject hancurkan = GameObject.FindGameObjectWithTag("sasaran");
             Debug.Log("Tombol M ditekan");
             Destroy(_targetDestroy);
             Destroy(hancurkan);
+        }
+        
+        if(Input.GetKeyDown(KeyCode.C))
+        {
+            SpriteRenderer _localSpriteRenderer = _kotakBerwarna.GetComponent<SpriteRenderer>();
+
+            _localSpriteRenderer.color = Color.black;            
         }
     }
 }
