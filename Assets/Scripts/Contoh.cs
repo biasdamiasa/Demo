@@ -2,25 +2,35 @@ using UnityEngine;
 
 public class Contoh : MonoBehaviour
 {
-    // Vector2 position1 = new Vector2(5, 1);
-
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-
-    int angka = 4, result = 1;
+    
     
     void Start()
     {
-        while (angka >= 1)
-        {
-            result *= angka;
-            angka--;
-        }
+        Player player = new Player();
 
-        Debug.Log(result);
+        Player player2 = new Player();
+
+        player.Name = "Bias";
+        player.Level = 5;
+        player.Health = 80;
+
+        player.Name = "Damiasa";
+        player.Level = 4;
+        player.Health = 70;
+
+
+        Debug.Log("Player 1");
+        Debug.Log("Name: " + player.Name);    
+        Debug.Log("Level: " + player.Level);
+        Debug.Log("Health: " + player.Health);  
+          
+        Debug.Log("Player 2");
+        Debug.Log("Name: " + player2.Name);    
+        Debug.Log("Level: " + player2.Level);    
+        Debug.Log("Health: " + player2.Health);    
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         

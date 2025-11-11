@@ -2,17 +2,20 @@ using UnityEngine;
 
 public class ContohLoop : MonoBehaviour
 {
-    int result = 1;
-        
+            
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        for(int i = 4; i >= 1; i--)
+        string bintang = "";
+        for(int i = 1; i <= 4; i++)
         {
-            result *= i;
+            for (int j = 1; j <= i; j++)
+            {
+                bintang += "*";
+            }
+            bintang += "\n";
         }
-
-        Debug.Log(result);
+        Debug.Log(bintang);
     }
     
 
