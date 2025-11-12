@@ -6,15 +6,17 @@ public class InteraksiUI : MonoBehaviour
 {
     public TMP_Text TeksBerubah;
     public TMP_Text NamaBerubah;
-
     public GameObject SquareUbahWarna;
+
+    public SquareMove squaremove;
 
     public List<string> daftarNama;
     public int idNama = 0;
 
     void Start()
     {
-        NamaBerubah.text = daftarNama[0];    
+        NamaBerubah.text = daftarNama[0];
+        squaremove.isMove = false;
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -77,10 +79,30 @@ public class InteraksiUI : MonoBehaviour
         UbahWarna(Color.green);
 
     }
-    
+
     public void UbahRandom()
     {
         Color col = new Color(Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f));
-        UbahWarna(col);        
+        UbahWarna(col);
+    }
+
+    public void Mulai()
+    {
+        squaremove.isMove = true;
+    }
+
+    public void Berhenti()
+    {
+        squaremove.isMove = false;
+    }
+
+    public void GerakKanan()
+    {
+        squaremove.isMoveRight = true;
+    }
+    
+    public void GerakKiri()
+    {
+        squaremove.isMoveRight = false;
     }
 }
