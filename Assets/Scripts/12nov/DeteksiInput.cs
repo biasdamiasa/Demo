@@ -3,13 +3,13 @@ using UnityEngine;
 
 public class DeteksiInput : MonoBehaviour
 {
-    public Action inputEvent;
+    public Action<int> inputEvent;
 
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            inputEvent.Invoke();
+            inputEvent.Invoke(5);
         }
     }
 }

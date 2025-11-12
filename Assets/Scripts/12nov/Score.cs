@@ -11,9 +11,9 @@ public class Score : MonoBehaviour
     }
 
     // Update is called once per frame
-    public void AddScore()
+    public void AddScore(int scoreValue)
     {
-        score = score + 1;
+        score = score + scoreValue;
     }
 
     void OnDisable()
