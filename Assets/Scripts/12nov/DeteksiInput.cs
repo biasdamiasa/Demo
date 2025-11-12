@@ -10,7 +10,7 @@ public class DeteksiInput : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            inputEvent.Invoke();
+            inputEvent?.Invoke();
         }
     }
 }
