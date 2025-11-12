@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class AksiTombol : MonoBehaviour
 {
@@ -14,9 +15,12 @@ public class AksiTombol : MonoBehaviour
     public TMP_Text objectText;
     public void Aksi()
     {
-        image.sprite = assetGambar;
-        objectText.text = "It's Me";
-        
-        Debug.Log("Button Click Me ditekan");
+        // // mengubah gambar & teks
+        // image.sprite = assetGambar;
+        // objectText.text = "It's Me";
+
+        // Debug.Log("Button Click Me ditekan");
+
+        SceneManager.LoadScene("Scene12NovUI_Baru");
     }
 }
