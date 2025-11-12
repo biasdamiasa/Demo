@@ -7,18 +7,18 @@ public class Score : MonoBehaviour
 
     private void OnEnable()
     {
-        objectDeteksiInput.inputEvent += AddScore;
+        objectDeteksiInput.inputEvent.AddListener(AddScore);
     }
 
     // Update is called once per frame
-    public void AddScore(int scoreValue)
+    public void AddScore()
     {
-        score = score + scoreValue;
+        score = score + 1;
     }
 
     void OnDisable()
     {
-        objectDeteksiInput.inputEvent -= AddScore;
+        objectDeteksiInput.inputEvent.RemoveListener(AddScore);
     }
 
 }

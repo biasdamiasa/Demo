@@ -1,15 +1,16 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DeteksiInput : MonoBehaviour
 {
-    public Action<int> inputEvent;
+    public UnityEvent inputEvent;
 
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            inputEvent.Invoke(5);
+            inputEvent.Invoke();
         }
     }
 }
