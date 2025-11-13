@@ -11,9 +11,22 @@ public class ScriptInteraksi : MonoBehaviour
 
     //deklarasi referensi object ke gameObject ScoreText
     public TMP_Text ScoreText;
+
+    public int nyawa;
+
+    public TMP_Text NyawaText;
+
+    public GameObject gameOverObject;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        score = 0;
+        ScoreText.text = "Skor: " + score.ToString();
+
+        nyawa = 10;
+        NyawaText.text = "Nyawa: " + nyawa.ToString();
+
+        gameOverObject.SetActive(false);
 
     }
 

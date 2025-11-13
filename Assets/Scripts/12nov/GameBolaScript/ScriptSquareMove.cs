@@ -1,3 +1,4 @@
+using UnityEditor.Analytics;
 using UnityEngine;
 
 
@@ -40,6 +41,29 @@ public class ScriptSquareMove : MonoBehaviour
                 gameObject.transform.Translate(-speed * Time.deltaTime, 0, 0);
                 break;
         }
+
+        // if(Input.GetKeyDown(KeyCode.A))
+        // {
+        //     gameObject.transform.Translate(-speed * Time.deltaTime, 0, 0);
+        // }
+        // else if (Input.GetKeyDown(KeyCode.D))
+        // {
+        //     gameObject.transform.Translate(speed * Time.deltaTime, 0, 0);
+        // }
+        // else if (Input.GetKeyDown(KeyCode.W))
+        // {
+        //     gameObject.transform.Translate(0, speed * Time.deltaTime, 0);
+        // }
+        // else
+        // {
+            
+        // }
+
+        if (scriptInteraksi.nyawa <= 0)
+        {
+            Time.timeScale = 0f;
+            scriptInteraksi.gameOverObject.SetActive(true);
+        }
     }
 
 
@@ -72,6 +96,11 @@ public class ScriptSquareMove : MonoBehaviour
             // memanggil method TambahSkor setelah mendeteksi tabrakan dan mengubah arahgerak
             TambahSkor();
         }
+
+        if(collision.gameObject.CompareTag("Bola"))
+        {
+            KurangiNyawa();
+        }
     }
 
 
@@ -83,6 +112,13 @@ public class ScriptSquareMove : MonoBehaviour
 
         //mengubah teks ScoreText dengan skor terbaru
         scriptInteraksi.ScoreText.text = "Skor: " + scriptInteraksi.score;
+    }
+
+    public void KurangiNyawa()
+    {
+        scriptInteraksi.nyawa--;
+
+        scriptInteraksi.NyawaText.text = "Nyawa: " + scriptInteraksi.nyawa;
     }
 }
 
