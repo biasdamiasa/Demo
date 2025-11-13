@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ScriptSquareMove : MonoBehaviour
 {   
-    //deklarasi  
+    //deklarasi  variabel dari enum untuk menyimpan arah gerak kanan/kiri/atas/bawah
     public ArahGerak arahgerak = ArahGerak.kanan;
     
     //deklarasi referensi ke class ScriptInteraksi
@@ -46,7 +46,7 @@ public class ScriptSquareMove : MonoBehaviour
     // deklarasi method untuk mendeteksi collision
     // mengecek apabila yang mengalami collision adalah gameObject dengan Tag "Dinding"
     // jika terdeteksi menabrak gameoBject dengan tag "Dinding", dengan arahgerak kanan maka arahgerak akan diubah nilainya kiri
-    // dst untuk mengubah arahgerak square setiap terdeteksi tabrakan
+    // dst untuk mengubah arahgerak square menjadi berlawanan arah setiap terdeteksi tabrakan
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Dinding"))
